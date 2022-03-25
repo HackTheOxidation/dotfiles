@@ -1,0 +1,225 @@
+A GNU Emacs Themes Gallery https://emacsthemes.com/
+Emacs Theme Gallery https://pawelbx.github.io/emacs-theme-gallery/
+GitHub - hlissner/doom-emacs: An Emacs framework for the stubborn martian hacker https://github.com/hlissner/doom-emacs
+GNU Emms https://www.gnu.org/software/emms/
+GitHub - brotzeit/rustic at e3cc89f3b4e06f034a5716e7e66095b9a9e6e20d https://github.com/brotzeit/rustic/tree/e3cc89f3b4e06f034a5716e7e66095b9a9e6e20d#cargo
+Langserver.org https://langserver.org/
+Tree-sitter｜Introduction https://tree-sitter.github.io/tree-sitter/
+Official page for Language Server Protocol https://microsoft.github.io/language-server-protocol/
+GitHub - emacs-ng/emacs-ng: A new approach to Emacs - Including TypeScript, Threading, Async I/O, and WebRender. https://github.com/emacs-ng/emacs-ng
+Notes from the "Conquering Kubernetes with Emacs" presentation · GitHub https://gist.github.com/abrochard/dd610fc4673593b7cbce7a0176d897de#modern-ux
+GitHub - Gavinok/emacs.d: nothing to see here 👀 https://github.com/Gavinok/emacs.d
+Top (GNU Guix Cookbook) https://guix.gnu.org/en/cookbook/en/html_node/
+guix-refcard.pdf https://guix.gnu.org/guix-refcard.pdf
+Packages — GNU Guix https://guix.gnu.org/en/packages/
+GNU's advanced distro and transactional package manager — GNU Guix https://guix.gnu.org/
+Top (GNU Guix Reference Manual) https://guix.gnu.org/en/manual/en/html_node/
+Nonguix / nonguix · GitLab https://gitlab.com/nonguix/nonguix
+GNU Manuals Online - GNU Project - Free Software Foundation https://www.gnu.org/manual/
+Groff https://web.cecs.pdx.edu/~trent/gnu/groff/groff.html
+Top (The GNU Troff Manual) https://www.gnu.org/software/groff/manual/html_node/
+Quick Reference (GNU make) https://www.gnu.org/software/make/manual/html_node/Quick-Reference.html
+GPG Tutorial | DevDungeon https://www.devdungeon.com/content/gpg-tutorial
+KVM install https://forum.artixlinux.org/index.php/topic,1650.0.html
+Revolt https://revolt.chat/
+DNS leak test https://dnsleaktest.com/
+Searx instances https://searx.space/
+BIOS Master Password Generator for Laptops https://bios-pw.org/
+ReverseEagle https://reverseeagle.org/
+Vertrauenswürdige DNS-Server https://www.privacy-handbuch.de/handbuch_93d.htm
+Framasoft - Change the worldone byte at a time https://framasoft.org/en/
+Front Page — Free Software Foundation — working together for free software https://www.fsf.org/
+CryptPad: Zero Knowledge, Collaborative Real Time Editing https://cryptpad.fr/
+GitHub - jitsi/jitsi-meet-electron: Jitsi Meet desktop application powered by https://github.com/jitsi/jitsi-meet-electron
+gemini.circumlunar.space - Gemini proxy https://proxy.vulpes.one/gemini/gemini.circumlunar.space/
+Gemini clients https://gemini.circumlunar.space/clients.html
+Gemini software https://gemini.circumlunar.space/software/
+the federation - a statistics hub https://the-federation.info/nodes
+shadowseer's Blogs — PUBLIC Writings https://writefreely.public.cat/me/c/
+Free-software online services | Services CHATONS https://entraide.chatons.org/en/
+De-google-ify Internet https://degooglisons-internet.org/en/alternatives
+GitHub - unstoppabledomains/decentralized-websites: Repository for resources on building decentralized websites https://github.com/unstoppabledomains/decentralized-websites
+Introducing RAD https://radicle.xyz/blog/introducing-rad.html
+Vim Awesome https://vimawesome.com/
+Home | Chris@Machine https://www.chrisatmachine.com/
+GitHub - mhinz/vim-galore: All things Vim! https://github.com/mhinz/vim-galore
+Get Fedora https://getfedora.org/
+Fedora Spins (Desktop Environments) https://spins.fedoraproject.org/
+Fedora Labs (Functional Bundles) https://labs.fedoraproject.org/
+Fedora on Diaspora https://diasp.org/u/fedora
+#fedora IRC via Riot https://riot.im/app/#/room/#fedora:matrix.org
+OpenShift Origin https://www.openshift.org/
+OpenSource.com https://opensource.com/
+The Open Source Way https://www.theopensourceway.org/
+Wikipedia https://www.wikipedia.org/
+LibriVox https://librivox.org/
+Open Clip Art https://openclipart.org/
+Free Sound https://www.freesound.org/
+Creative Commons https://creativecommons.org/
+Pixabay https://pixabay.com/
+Getting Started — Flatpak documentation https://docs.flatpak.org/en/latest/getting-started.html
+Welcome to Flatpak’s documentation! — Flatpak documentation https://docs.flatpak.org/en/latest/
+Containers · GitHub https://github.com/containers
+Podman https://podman.io/
+Buildah | buildah.io https://buildah.io/
+Docker Compose Specification https://compose-spec.io/
+Open Container Initiative - Open Container Initiative https://opencontainers.org/
+Running rootless Podman as a non-root user | Enable Sysadmin https://www.redhat.com/sysadmin/rootless-podman-makes-sense
+Rootless containers using Podman | Enable Sysadmin https://www.redhat.com/sysadmin/rootless-containers-podman
+Understanding root inside and outside a container https://www.redhat.com/en/blog/understanding-root-inside-and-outside-container
+Installation https://containertoolbx.org/install/
+Team Silverblue https://silverblue.fedoraproject.org/
+libostree - ostreedev/ostree https://ostreedev.github.io/ostree/
+GitHub - ostreedev/ostree: Operating system and container binary deployment and upgrades https://github.com/ostreedev/ostree
+Fedora Magazine https://fedoramagazine.org/
+Fedora Docs https://docs.fedoraproject.org/
+Fedora Developer Portal https://developer.fedoraproject.org/
+RPM Fusion - RPM Fusion https://rpmfusion.org/
+Howto/NVIDIA - RPM Fusion https://rpmfusion.org/Howto/NVIDIA
+DNF System Upgrade :: Fedora Docs https://docs.fedoraproject.org/en-US/quick-docs/dnf-system-upgrade/
+Creating a disk partition in Linux :: Fedora Docs https://docs.fedoraproject.org/en-US/quick-docs/creating-a-disk-partition-in-linux/
+Nginx not starting: Address already in use (nginx: bind to 0.0.0.0:80 failed) | DigitalOcean https://www.digitalocean.com/community/questions/nginx-not-starting-address-already-in-use-nginx-bind-to-0-0-0-0-80-failed
+Mine of Information - Beginner's Guide to Installing from Source https://moi.vonos.net/linux/beginners-installing-from-source/
+i3: i3 User’s Guide https://i3wm.org/docs/userguide.html
+Egbert's Wiki https://wiki.vandenbussche.nl/index.php?title=Main_Page
+Linux Shell Scripting Tutorial - A Beginner's handbook https://bash.cyberciti.biz/guide/Main_Page
+Linux Device Drivers https://bootlin.com/doc/books/ldd3.pdf
+The Linux Documentation Project: Guides https://tldp.org/guides.html
+Qtile – A hackable tiling window manager written in Python | Qtile.org http://www.qtile.org/
+adi1090x/rofi: A large collection of Rofi based custom Menu, Applets, Launchers & Powermenus. https://github.com/adi1090x/rofi
+Buuf - Gnome-look.org https://www.gnome-look.org/s/Gnome/p/1012512
+OxayotlTheGreat · GitLab https://www.opencode.net/oxayotlthegreat
+The Xonsh Shell — Python-powered shell https://xon.sh/
+GitHub - xxh/xxh: 🚀 Bring your favorite shell wherever you go through the ssh. https://github.com/xxh/xxh
+Advanced Linux Programming http://www.makelinux.net/alp/
+GitHub - qtile/qtile: A full-featured, hackable tiling window manager written and configured in Python (X11 + Wayland) https://github.com/qtile/qtile
+Setting up NextCloud behind Caddy - Help - Caddy Community https://caddy.community/t/setting-up-nextcloud-behind-caddy/14787
+Using Docker Compose · dani-garcia/vaultwarden Wiki · GitHub https://github.com/dani-garcia/vaultwarden/wiki/Using-Docker-Compose
+GitHub - qtile/qtile-examples: Example configurations and scripts for Qtile https://github.com/qtile/qtile-examples
+inputsh/awesome-linux: A list of awesome projects and resources that make Linux even more awesome. https://github.com/inputsh/awesome-linux
+Tutorials and Howtos - Alpine Linux https://wiki.alpinelinux.org/wiki/Tutorials_and_Howtos
+.:: Phrack Magazine ::. http://www.phrack.org/
+OpenYiff https://github.com/OpenYiff
+git-annex https://git-annex.branchable.com/
+GitHub - natpen/awesome-wayland: A curated list of Wayland code and resources. https://github.com/natpen/awesome-wayland
+GitHub - rizinorg/rizin: UNIX-like reverse engineering framework and command-line toolset. https://github.com/rizinorg/rizin
+GitHub - ranger/ranger: A VIM-inspired filemanager for the console https://github.com/ranger/ranger
+Inbox | tomas.hagenau@protonmail.ch | ProtonMail https://mail.protonmail.com/inbox
+Mastodon https://mastodon.social/web/timelines/home
+Oryx: The ZSA Keyboard Configurator https://configure.zsa.io/moonlander/layouts/eBD3l/latest/0
+Lisp Cookbook https://lispcookbook.github.io/cl-cookbook/
+Structure and Interpretation of Computer Programs https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html
+GitHub - CodyReichert/awesome-cl: A curated list of awesome Common Lisp frameworks, libraries and other shiny stuff. https://github.com/CodyReichert/awesome-cl
+CLiki: index https://www.cliki.net/
+Welcome to Common-Lisp.net! https://common-lisp.net/
+Simply Scheme contents https://people.eecs.berkeley.edu/~bh/simply-toc.html
+Quickdocs https://quickdocs.org/
+About - Steel Bank Common Lisp http://www.sbcl.org/
+quicklisp - Library Manager - common-lisp-libraries https://common-lisp-libraries.readthedocs.io/quicklisp/
+CLiki: Quicklisp tutorial https://cliki.net/Quicklisp%20tutorial
+Getting started https://lispcookbook.github.io/cl-cookbook/getting-started.html
+Quicklisp beta https://www.quicklisp.org/beta/
+Contents • Build Your Own Lisp https://buildyourownlisp.com/contents
+Lean https://leanprover.github.io/
+GitHub - leanprover/lean4: Lean 4 programming language and theorem prover https://github.com/leanprover/lean4
+GitHub - pyenv/pyenv: Simple Python version management https://github.com/pyenv/pyenv#simple-python-version-management-pyenv
+Write once. Deploy everywhere.— BeeWare https://beeware.org/
+Briefcase— BeeWare https://beeware.org/project/projects/tools/briefcase/
+awesome-xonshrc/xonshrc at main · anki-code/awesome-xonshrc · GitHub https://github.com/anki-code/awesome-xonshrc/blob/main/xonshrc
+GitHub - cafehaine/xontrib-xlsd: xontrib-xlsd is the next gen ls command for xonsh shell, inspired by lsd. https://github.com/cafehaine/xontrib-xlsd
+GitHub - xonsh/awesome-xontribs: Awesome list of Xonsh contributions/extensions https://github.com/xonsh/awesome-xontribs
+the xonsh shell — xonsh 0.12.4 documentation https://xon.sh/contents.html
+GitHub - anki-code/xonsh-cheatsheet: Cheat sheet for xonsh shell with copy-pastable examples. The best doc for the new users. https://github.com/anki-code/xonsh-cheatsheet
+xontrib · GitHub Topics · GitHub https://github.com/topics/xontrib
+xontrib-rc-awesome/rc_awesome.xsh at main · anki-code/xontrib-rc-awesome · GitHub https://github.com/anki-code/xontrib-rc-awesome/blob/main/xontrib/rc_awesome.xsh
+GitHub - xonsh/xontrib-template: A cookiecutter template for xontribs, a.k.a xonsh contributions https://github.com/xonsh/xontrib-template
+docker-rabbitmq-example/docker-compose.yml at master · dmaze/docker-rabbitmq-example https://github.com/dmaze/docker-rabbitmq-example/blob/master/docker-compose.yml
+Installation - HTTPie 3.2.1 (latest) docs https://httpie.io/docs/cli/installation
+Introduction — Web3.py 5.31.1 documentation https://web3py.readthedocs.io/en/v5/
+Python — Flatpak documentation https://docs.flatpak.org/en/latest/python.html
+Neovim Python Client — Neovim Python Client documentation https://pynvim.readthedocs.io/en/latest/
+Ethereum for Python Developers | ethereum.org https://ethereum.org/en/developers/docs/programming-languages/python/
+Rust Programming Language https://www.rust-lang.org/
+The Rust Programming Language - The Rust Programming Language https://doc.rust-lang.org/book/
+Introduction - Rust By Example https://doc.rust-lang.org/stable/rust-by-example/
+std - Rust https://doc.rust-lang.org/std/index.html
+Introduction - The Rust Reference https://doc.rust-lang.org/reference/index.html
+Introduction - The Rustonomicon https://doc.rust-lang.org/nomicon/index.html
+The Unstable Book - The Rust Unstable Book https://doc.rust-lang.org/nightly/unstable-book/index.html
+rust-unofficial/awesome-rust: A curated list of Rust code and resources. https://github.com/rust-unofficial/awesome-rust#readme
+Table of Contents - Rust Cookbook https://rust-lang-nursery.github.io/rust-cookbook/
+nrc/r4cppp: Rust for C++ programmers https://github.com/nrc/r4cppp
+The Little Book of Rust Macros https://danielkeep.github.io/tlborm/book/
+Title Page - The Rust Performance Book https://nnethercote.github.io/perf-book/
+Introduction - Learning Rust With Entirely Too Many Linked Lists https://rust-unofficial.github.io/too-many-lists/
+Updates - Easy Rust https://dhghomon.github.io/easy_rust/
+lapce/lapce: Lightning-fast and Powerful Code Editor written in Rust https://github.com/lapce/lapce
+Introduction | Nushell https://www.nushell.sh/book/
+Introduction - Just Programmer's Manual https://just.systems/man/en/
+nushell/awesome-nu: A curated list of awesome tools that work within the nu language ecosystem e.g. nushell, scripts, nana, etc. https://github.com/nushell/awesome-nu
+Introduction to Computing: Explorations in Language, Logic, and Machines - FullText.pdf https://computingbook.org/FullText.pdf
+DevFreeBooks https://devfreebooks.github.io/
+Mining of Massive Datasets http://www.mmds.org/
+Compiler Construction https://people.inf.ethz.ch/wirth/CompilerConstruction/index.html
+GitHub - EbookFoundation/free-programming-books: Freely available programming books https://github.com/EbookFoundation/free-programming-books
+The Fuzzing Book https://www.fuzzingbook.org/
+The Hitchhiker’s Guide to Python! — The Hitchhiker's Guide to Python https://docs.python-guide.org/index.html
+How to Design Programs, Second Edition http://htdp.org/2022-2-9/Book/index.html
+The Missing Semester of Your CS Education · the missing semester of your cs education https://missing.csail.mit.edu/
+The Linux Programming Interface https://man7.org/tlpi/
+basics_lulu2.pdf http://hjemmesider.diku.dk/~torbenm/Basics/basics_lulu2.pdf
+Operating Systems: Three Easy Pieces https://pages.cs.wisc.edu/~remzi/OSTEP/
+Algorithms, 4th Edition by Robert Sedgewick and Kevin Wayne https://algs4.cs.princeton.edu/home/
+BSTJ : A Mathematical Theory of Communication (Shannon, C.E.) : Free Download, Borrow, and Streaming : Internet Archive https://archive.org/details/bstj27-4-623/mode/2up
+Quantum Computing for the Quantum Curious | SpringerLink https://link.springer.com/book/10.1007/978-3-030-61601-4
+Learn Quantum Computation using Qiskit https://qiskit.org/textbook/preface.html
+Introduction - How to make an Operating System https://samypesse.gitbook.io/how-to-create-an-operating-system/
+Introduction · Crafting Interpreters https://craftinginterpreters.com/introduction.html
+Introduction to Ada — learn.adacore.com https://learn.adacore.com/courses/intro-to-ada/index.html
+GitHub - munificent/craftinginterpreters: Repository for the book "Crafting Interpreters" https://github.com/munificent/craftinginterpreters
+free-programming-books/free-programming-books-subjects.md at main · EbookFoundation/free-programming-books https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-subjects.md
+free-programming-books/free-programming-books-langs.md at main · EbookFoundation/free-programming-books https://github.com/EbookFoundation/free-programming-books/blob/main/books/free-programming-books-langs.md
+Exercism https://exercism.org/
+Home | Bookdown https://bookdown.org/
+Compiler Explorer https://godbolt.org/
+Hoppscotch - Open source API development ecosystem https://hoppscotch.io/
+GitHub - awesome-lists/awesome-bash: A curated list of delightful Bash scripts and resources. https://github.com/awesome-lists/awesome-bash
+Gaussian Elimination https://people.cs.rutgers.edu/~venugopa/parallel_summer2012/ge.html
+GitHub - danistefanovic/build-your-own-x: 🤓 Build your own (insert technology here) https://github.com/danistefanovic/build-your-own-x
+Expanded Main Page - OSDev Wiki https://wiki.osdev.org/Expanded_Main_Page
+CS143: Compilers https://web.stanford.edu/class/archive/cs/cs143/cs143.1128/
+How to write a simple operating system in assembly language http://mikeos.sourceforge.net/write-your-own-os.html
+sindresorhus/awesome: 😎 Awesome lists about all kinds of interesting topics https://github.com/sindresorhus/awesome
+veggiemonk/awesome-docker: A curated list of Docker resources and projects https://github.com/veggiemonk/awesome-docker#readme
+mermaid - Markdownish syntax for generating flowcharts, sequence diagrams, class diagrams, gantt charts and git graphs. https://mermaid-js.github.io/mermaid/#/
+https://edtech.dk/MAKO/ https://edtech.dk/MAKO/
+Mathematics for Machine Learning - mml-book.pdf https://mml-book.github.io/book/mml-book.pdf
+STM1001: Introduction to Machine Learning in R https://bookdown.org/rehk/stm1001_dsm_introduction_to_machine_learning_in_r/
+Preface | A Guide on Data Analysis https://bookdown.org/mike/data_analysis/
+Video Lectures | Linear Algebra | Mathematics | MIT OpenCourseWare https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/
+List of LaTeX mathematical symbols - OeisWiki https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
+Mathematical fonts - Overleaf, Online LaTeX Editor https://www.overleaf.com/learn/latex/Mathematical_fonts
+List of Greek letters and math symbols - Overleaf, Online LaTeX Editor https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols
+Biological computing - Wikipedia https://en.wikipedia.org/wiki/Biological_computing
+Bioelectronics: The Convergence of Biology and Electronics https://www.nist.gov/system/files/documents/pml/div683/bioelectronics_report.pdf
+Category:Bioinformatics algorithms - Wikipedia https://en.wikipedia.org/wiki/Category:Bioinformatics_algorithms
+Bioconductor - Home https://www.bioconductor.org/
+Assigning cell types with SingleR https://bioconductor.org/books/release/SingleRBook/
+The csaw Book https://bioconductor.org/books/release/csawBook/
+Orchestrating Single-Cell Analysis with Bioconductor https://bioconductor.org/books/release/OSCA/
+FASTX-Toolkit http://hannonlab.cshl.edu/fastx_toolkit/
+Bioinformatics services | EMBL’s European Bioinformatics Institute https://www.ebi.ac.uk/services
+International Nucleotide Sequence Database Collaboration | INSDC https://www.insdc.org/
+Services https://www.ddbj.nig.ac.jp/services/index-e.html?tag=database
+Biological Databases for Human Research - PMC https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4411498/
+The Molecular Biology Database Collection: an updated compilation of biological database resources - PMC https://www.ncbi.nlm.nih.gov/pmc/articles/PMC29860/
+List of biological databases - Wikipedia https://en.wikipedia.org/wiki/List_of_biological_databases
+National Center for Biotechnology Information https://www.ncbi.nlm.nih.gov/
+Model organism database - Wikipedia https://en.wikipedia.org/wiki/Model_organism_database
+bioinfowebtools_3_1_12.pdf https://btiplantbioinfocourse.files.wordpress.com/2012/03/bioinfowebtools_3_1_12.pdf
+Bioinformatics Books - CBIRT https://cbirt.net/bioinformatics-books/
+NCBI C++ Toolkit Book https://ncbi.github.io/cxx-toolkit/
+Research | The Sinclair Lab https://sinclair.hms.harvard.edu/research
+David A. Sinclair AO PhD (@davidasinclair) | Nitter | PussTheCat.org https://nitter.pussthecat.org/davidasinclair
+The economic value of targeting aging | Nature Aging https://www.nature.com/articles/s43587-021-00080-0
+Jisho.org: Japanese Dictionary https://jisho.org/

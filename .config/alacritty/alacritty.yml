@@ -1,0 +1,75 @@
+# Import colorscheme
+import:
+  - ~/.config/alacritty/everforest.yml
+
+# Font configuration
+font:
+  normal:
+   family: "FiraCode"
+   style: Regular
+  bold:
+   family: "FiraCode"
+   style: Bold
+  italic:
+   family: "FiraCode"
+   style: Italic
+  bold_italic:
+   family: "FiraCode"
+   style: Bold Italic
+
+  # Point size
+  size: 15.0
+
+
+# Background opacity
+window:
+  opacity: 0.80
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+cursor:
+  # Cursor style
+  style:
+    # Cursor shape
+    shape: Block
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+# Startup directory
+working_directory: None
+
+mouse:
+  # Click settings
+  #
+  # The `double_click` and `triple_click` settings control the time
+  # alacritty should wait for accepting multiple clicks as one double
+  # or triple click.
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: false
+
+# Mouse bindings
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+# Key bindings
+key_bindings:
+- { key: V, mods: Alt, action: Paste }
+- { key: C, mods: Alt, action: Copy }
+- { key: K, mods: Shift|Alt, action: ScrollPageUp }
+- { key: J, mods: Shift|Alt, action: ScrollPageDown }
+- { key: K, mods: Alt, action: ScrollLineUp }
+- { key: J, mods: Alt, action: ScrollLineDown }
+- { key: G, mods: Shift|Alt, action: ScrollToTop }
+- { key: G, mods: Alt, action: ScrollToBottom }
+- { key: L, mods: Alt, action: ClearSelection }
+- { key: Equals, mods: Control, action: ResetFontSize }
+- { key: Plus, mods: Control, action: IncreaseFontSize }
+- { key: Minus, mods: Control, action: DecreaseFontSize }
+- { key: S, mods: Alt, action: SearchForward }
+- { key: S, mods: Shift|Alt, action: SearchBackward }

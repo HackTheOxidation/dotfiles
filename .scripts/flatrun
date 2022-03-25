@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+app=$(flatpak list --app --columns=app | rofi -dmenu)
+echo $app
+if [ ! $app = "" ]; then
+    flatpak run $app &
+fi

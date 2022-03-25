@@ -1,0 +1,110 @@
+/** HackTheOxidation's rofi config file **/
+
+configuration {
+  font: "FiraCode 12";
+  show-icons: true;
+  icon-theme: "Arc";
+  display-drun: ">>>";
+  display-run: ">>>";
+  run-display-format: "{name}";
+  drun-display-format: "{name}";
+}
+
+@import "everforest.rasi"
+
+window {
+  background-color: @background;
+  text-color: @text;
+  transparency: "real";
+  location: center;
+  border: 0px;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+message {
+  border-color: @separatorcolor;
+  text-color: @text;
+}
+
+prompt {
+  enabled: true;
+  padding: 0.30% 1% 0% -0.5%;
+  font: "FiraCode 12";
+  location: center;
+  text-color: @text;
+}
+
+entry {
+  expand: true;
+  horizontal-align: 0;
+  placeholder: "Fire it up!";
+  location: center;
+  padding: 0% 0% 0% 0%;
+  blink: true;
+  text-color: @text;
+}
+
+inputbar {
+  children: [ prompt, entry ];
+  expand: false;
+  border: 0%;
+  border-radius: 6px;
+  margin: 0% 54.5% 0% 0%;
+  padding: 1.5%;
+  text-color: @text;
+}
+
+listview {
+  padding: 0px;
+  columns: 7;
+  lines: 4;
+  spacing: 2%;
+  cycle: false;
+  dynamic: true;
+  layout: vertical;
+  border-color: @separatorcolor;
+  text-color: @text;
+}
+
+mainbox {
+  border: 0% 0% 0% 0%;
+  border-radius: 0% 0% 0% 0%;
+  children: [ inputbar, listview ];
+  spacing: 2.5%;
+  padding: 20% 5% 20% 5%;
+  text-color: @text;
+}
+
+element {
+  orientation: vertical;
+  border-radius: 0%;
+  padding: 4% 0% 4% 0%;
+}
+
+element-icon {
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  size: 80px;
+  border: 0px;
+}
+
+element-text {
+  expand: true;
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+  margin: 0.5% 0.5% -0.5% 0.5%;
+  background-color: @normal-background;
+  text-color:       @text;
+}
+
+element selected {
+  border: 0% 0% 0% 0%;
+  border-radius: 25px;
+}
+
+textbox {
+    text-color: @text;
+}
+

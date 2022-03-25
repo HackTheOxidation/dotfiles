@@ -1,0 +1,17 @@
+/******************************************************************************
+ * ROFI Color theme
+ * User: Rasi
+ * Copyright: Rasmus Steinke
+ ******************************************************************************/
+* {
+    foreground:                  rgba ( 129, 147, 150, 60 % );
+    normal-foreground:           @foreground;
+    alternate-normal-background: rgba ( 0, 43, 55, 60 % );
+    active-foreground:           rgba ( 0, 142, 212, 60 % );
+    background:                  rgba ( 0, 43, 55, 60 % );
+    normal-background:           rgba ( 0, 43, 55, 60 % );
+    selected-normal-background:  rgba ( 0, 54, 66, 60 % );
+    spacing:                     2;
+    separatorcolor:              rgba ( 0, 54, 66, 60 % );
+    text: 			 rgba ( 152, 208, 40, 100 % );
+}

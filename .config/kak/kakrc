@@ -1,0 +1,2 @@
+colorscheme gruvbox-dark
+add-highlighter global/ number-lines

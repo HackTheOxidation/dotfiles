@@ -1,0 +1,15 @@
+/******************************************************************************
+ * Everforest Color theme for rofi
+ ******************************************************************************/
+* {
+    foreground:                  rgba ( 211, 198, 170, 60 % );
+    normal-foreground:           @foreground;
+    active-foreground:           rgba ( 167, 192, 128, 60 % );
+    background:                  rgba ( 43, 51, 57, 60 % );
+    normal-background:           @background;
+    alternate-normal-background: @background;
+    separatorcolor:              rgba ( 74, 73, 64, 60 % );
+    selected-normal-background:  @separatorcolor;
+    spacing:                     2;
+    text: 			             rgba ( 219, 188, 127, 100 % );
+}

@@ -1,0 +1,40 @@
+# i3status config file
+
+general {
+	colors = true
+	color_good = "#5d7e19"
+	color_bad = "#5e8baa"
+	color_degraded = "#001100"
+	output_format = "i3bar"
+	interval = 1
+}
+
+order += "disk /home"
+order += "volume master"
+order += "cpu_usage 0"
+order += "ethernet enp6s0"
+order += "tztime local"
+
+ethernet enp6s0 {
+	format_up = "E: %ip"
+	format_down = "E: down"
+}
+
+cpu_usage {
+	format = "CPU: %usage"
+}
+
+tztime local {
+	format = "%d/%m %H:%M"
+}
+
+disk "/home" {
+	format = "|Home:%free"
+}
+
+volume master {
+	format = "Vol:%volume"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
