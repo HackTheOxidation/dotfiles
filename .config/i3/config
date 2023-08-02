@@ -45,7 +45,7 @@ floating_modifier $mod
 bindsym $mod+Return exec $term
 
 # start nnn
-bindsym $mod+n exec $term -e nnn
+bindsym $mod+n exec $term -e ranger
 
 # start editor
 bindsym $mod+e exec $editor
