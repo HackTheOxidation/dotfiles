@@ -4,18 +4,21 @@
 
 import os
 import subprocess
-from catppuccin import catppuccin_colors as catppuccin
+
 from libqtile import bar, hook, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.dgroups import simple_key_binder
+
+from .colors import current as colorscheme
 
 mod = "mod4"
 browser = "qutebrowser"
 editor = "emacsclient -c -a emacs"
 wallpaper = os.path.expanduser("~") + "/Nextcloud/HackTheOxidation/Wallpapers/stairs.jpg"
 
-terminal = "kitty"
+terminal = "alacritty"
+file_manager = "alacritty - e ranger"
 run_launcher = "rofi -show run"
 drun_launcher = "rofi -show drun"
 flatpak_launcher = "flatrun"
@@ -24,109 +27,51 @@ keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
-    Key([mod], "h",
-        lazy.layout.left(),
-        desc="Move focus to left"),
-
-    Key([mod], "l",
-        lazy.layout.right(),
-        desc="Move focus to right"),
-
-    Key([mod], "j",
-        lazy.layout.down(),
-        desc="Move focus down"),
-
-    Key([mod], "k",
-        lazy.layout.up(),
-        desc="Move focus up"),
-
-    Key([mod], "Tab",
-        lazy.layout.next(),
-        desc="Move window focus to other window"),
-
-    Key([mod, "shift"], "h",
-        lazy.layout.shuffle_left(),
-        desc="Move window to the left"),
-
-    Key([mod, "shift"], "l",
-        lazy.layout.shuffle_right(),
-        desc="Move window to the right"),
-
-    Key([mod, "shift"], "j",
-        lazy.layout.shuffle_down(),
-        desc="Move window down"),
-
-    Key([mod, "shift"], "k",
-        lazy.layout.shuffle_up(),
-        desc="Move window up"),
-
-    Key([mod], "n",
-        lazy.layout.normalize(),
-        desc="Reset all window sizes"),
-
-    Key([mod, "shift"], "Return",
+    Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
+    Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
+    Key([mod], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
+    Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
+    Key([mod, "shift"], "l", lazy.layout.shuffle_right(), desc="Move window to the right"),
+    Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key(
+        [mod, "shift"],
+        "Return",
         lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack"),
-
-    Key([mod], "Return",
-        lazy.spawn(terminal),
-        desc="Launch terminal"),
-
-    Key([mod], "space",
-        lazy.next_layout(),
-        desc="Toggle between layouts"),
-
-    Key([mod], "c",
-        lazy.window.kill(),
-        desc="Kill focused window"),
-
-    Key([mod, "control"], "r",
-        lazy.reload_config(),
-        desc="Reload the config"),
-
-    Key([mod, "control"], "q",
-        lazy.shutdown(),
-        desc="Shutdown Qtile"),
-
-    Key([mod, "control"], "l",
-        lazy.spawn("cinnamon-screensaver-command -l"),
-        desc="Lock Screen"),
-
-    Key([mod], "p",
-        lazy.spawn(run_launcher),
-        desc="Run an Application"),
-
-    Key([mod, "shift"], "p",
-        lazy.spawn(drun_launcher),
-        desc="Run a Desktop Application"),
-
-    Key([mod], "f",
-        lazy.spawn(flatpak_launcher),
-        desc="Launch a flatpak app"),
-
-    Key([mod], "b",
-        lazy.spawn(browser),
-        desc="Spawn default browser"),
-
-    Key([mod], "e",
-        lazy.spawn(editor),
-        desc="Spawn default editor"),
+        desc="Toggle between split and unsplit sides of stack",
+    ),
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "l", lazy.spawn("cinnamon-screensaver-command -l"), desc="Lock Screen"),
+    Key([mod], "p", lazy.spawn(run_launcher), desc="Run an Application"),
+    Key([mod, "shift"], "p", lazy.spawn(drun_launcher), desc="Run a Desktop Application"),
+    Key([mod], "f", lazy.spawn(flatpak_launcher), desc="Launch a flatpak app"),
+    Key([mod], "b", lazy.spawn(browser), desc="Spawn default browser"),
+    Key([mod], "e", lazy.spawn(editor), desc="Spawn default editor"),
+    Key([mod], "n", lazy.spawn(file_manager), desc="Spawn default file_manager"),
 ]
 
-layouts = [layout.MonadTall(margin=5,
-                            border_focus=catppuccin['mauve'],
-                            border_normal=catppuccin['black']),
-           layout.Max(),
-           # layout.Columns(),
-           # layout.Stack(num_stacks=2),
-           # layout.Bsp(),
-           # layout.Matrix(),
-           # layout.MonadWide(),
-           # layout.RatioTile(),
-           # layout.Tile(),
-           # layout.TreeTab(),
-           # layout.VerticalTile(),
-           # layout.Zoomy(),
+layouts = [
+    layout.MonadTall(
+        margin=5, border_focus=colorscheme["mauve"], border_normal=colorscheme["black"]
+    ),
+    layout.Max(),
+    # layout.Columns(),
+    # layout.Stack(num_stacks=2),
+    # layout.Bsp(),
+    # layout.Matrix(),
+    # layout.MonadWide(),
+    # layout.RatioTile(),
+    # layout.Tile(),
+    # layout.TreeTab(),
+    # layout.VerticalTile(),
+    # layout.Zoomy(),
 ]
 
 
@@ -134,61 +79,50 @@ widget_defaults = dict(
     font="Ubuntu Mono",
     fontsize=12,
     padding=3,
-    foreground=catppuccin['black'],
+    foreground=colorscheme["black"],
 )
 extension_defaults = widget_defaults.copy()
 
 
 def bar_widgets():
     widgets = [
-        widget.GroupBox(highlight_method="line",
-                        background=catppuccin["black"],
-                        foreground=catppuccin["green"],
-                        highlight_color=[catppuccin["mauve"], catppuccin["mauve"]],
-                        inactive=catppuccin["black"]),
-
-        widget.WindowName(fontsize=12,
-                          foreground=catppuccin["white"]),
-
+        widget.GroupBox(
+            highlight_method="line",
+            background=colorscheme["black"],
+            foreground=colorscheme["green"],
+            highlight_color=[colorscheme["mauve"], colorscheme["mauve"]],
+            inactive=colorscheme["black"],
+        ),
+        widget.WindowName(fontsize=12, foreground=colorscheme["white"]),
         widget.Systray(),
-
-        widget.Volume(fmt="Vol: {}",
-                      foreground=catppuccin["black"],
-                      background=catppuccin["sky"]),
-
-        widget.CPU(format=" {load_percent:04}%",
-                   foreground=catppuccin["black"],
-                   background=catppuccin["peach"]),
-
-        widget.Clock(format="🕓 %A, %B %d - %H:%M ",
-                     foreground=catppuccin["black"],
-                     background=catppuccin["maroon"]),
+        widget.Volume(
+            fmt="Vol: {}", foreground=colorscheme["black"], background=colorscheme["sky"]
+        ),
+        widget.CPU(
+            format=" {load_percent:04}%",
+            foreground=colorscheme["black"],
+            background=colorscheme["peach"],
+        ),
+        widget.Clock(
+            format="🕓 %A, %B %d - %H:%M ",
+            foreground=colorscheme["black"],
+            background=colorscheme["maroon"],
+        ),
     ]
 
     return widgets
 
 
-my_bar = bar.Bar(bar_widgets(),
-                 22,
-                 background="#00000000")
+my_bar = bar.Bar(bar_widgets(), 22, background="#00000000")
 
 screens = [
-    Screen(wallpaper=wallpaper,
-           wallpaper_mode='fill',
-           top=my_bar),
+    Screen(wallpaper=wallpaper, wallpaper_mode="fill", top=my_bar),
 ]
 
 mouse = [
-    Drag([mod], "Button1",
-         lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-
-    Drag([mod], "Button3",
-         lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
-
-    Click([mod], "Button2",
-          lazy.window.bring_to_front()),
+    Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
+    Drag([mod], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
 groups = [
