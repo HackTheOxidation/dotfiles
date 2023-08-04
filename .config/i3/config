@@ -4,42 +4,61 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Autostart
-exec_always --no-startup-id ~/.config/i3/autostart.sh
-
+### Autostart
+# Compositor
+exec --no-startup-id picom --config ~/.config/picom/picom.conf --vsync &
+# Polkit daemon
+exec --no-startup-id lxpolkit &
+# Emacs daemon
+exec --no-startup-id /usr/bin/emacs --daemon &
+# Network Manager 
+exec --no-startup-id nm-applet &
+# Clipboard Manager
+exec --no-startup-id xclip &
+exec --no-startup-id xsel &
+# Wallpaper
+exec --no-startup-id ~/.fehbg &
 # Bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-set $mod Mod4
-
-set $term alacritty
-
-set $editor emacsclient -c -a emacs
-
-#set $launcher dmenu_run -m $dmenumon -fn $dmenufont -nb $norm_bg -nf $norm_fg -sb $sel_bg -sf $sel_fg
-set $launcher rofi -show drun
-
-# Font for window titles. 
-font pango:FiraCode 11
-
 # Start i3lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# Start various programs
-#exec --no-startup-id nm-applet &
-#exec --no-startup-id /home/hacker/.fehbg &
-#exec --no-startup-id picom --config /home/hacker/.config/picom/picom.conf --experimental-backends --vsync &
 #exec_always lxsession &
+
+### Font for window titles. 
+font pango:FiraCode 11
+
+### Variables
+set $mod Mod4
+set $term alacritty
+set $editor emacsclient -c -a emacs
+set $launcher rofi -show drun
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
+
+### Keybindings
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -56,14 +75,7 @@ bindsym $mod+Shift+e exec emacsclient --eval "(emacs-everywhere)"
 # kill focused window
 bindsym $mod+c kill
 
-# start dmenu (a program launcher)
-set $dmenumon 0
-set $dmenufont FiraCode:size=13
-set $norm_bg \#2b3339
-set $norm_fg \#d3c6aa
-set $sel_bg \#a7c080
-set $sel_fg \#edeece
-
+# Run Launcher
 bindsym $mod+p exec $launcher
 bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop 
 
@@ -104,19 +116,6 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+d focus child
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -156,16 +155,16 @@ bindsym $mod+Shift+q exec "i3-msg exit"
 # resize window (you can also use the mouse for that)
 # These bindings trigger as soon as you enter the resize mode
 
-# Pressing left will shrink the window’s width.
-# Pressing right will grow the window’s width.
-# Pressing up will shrink the window’s height.
-# Pressing down will grow the window’s height.
+# Pressing 'y' will shrink the window’s width.
 bindsym $mod+y resize shrink width 10 px or 10 ppt
+# Pressing 'u' will grow the window’s width.
 bindsym $mod+u resize grow height 10 px or 10 ppt
+# Pressing 'i' will shrink the window’s height.
 bindsym $mod+i resize shrink height 10 px or 10 ppt
+# Pressing 'o' will grow the window’s height.
 bindsym $mod+o resize grow width 10 px or 10 ppt
 
-# Window border style
+### Window border style
 default_border pixel 3
 
 ### Theme - Everforest
@@ -178,8 +177,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
 
-
-# Gaps configuration
+### Gaps configuration
 gaps top 5
 gaps bottom 5
 gaps left 5
@@ -189,6 +187,7 @@ gaps outer 5
 gaps horizontal 5
 gaps vertical 5
 
+### i3status
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {

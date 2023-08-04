@@ -8,4 +8,6 @@ call plug#begin()
     Plug 'junegunn/fzf.vim' " FZF integration for vim.
 
     Plug 'catppuccin/vim', { 'as': 'catppuccin' } " Catppuccin color scheme
+
+    Plug 'sainnhe/everforest' " Everforest color scheme
 call plug#end()

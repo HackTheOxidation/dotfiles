@@ -14,4 +14,4 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " use <c-space> to trigger coc completion
-inoremap <silent><expr> <c-space> pumvisible() ? coc#_select_confirm() : coc#refresh()
+inoremap <silent><expr> <C-space> pumvisible() ? coc#_select_confirm() : coc#refresh()
