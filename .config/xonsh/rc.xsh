@@ -14,6 +14,7 @@ aliases['ll'] = 'ls -l'
 
 # Remove front dot in multiline input to make the code copy-pastable.
 $MULTILINE_PROMPT=' '
+$VI_MODE = True
 
 ### Xontribs
 _xontribs = [
