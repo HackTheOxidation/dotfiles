@@ -3,4 +3,4 @@
 """
 from .colorthemes import catppuccin, everforest  # noqa
 
-current = catppuccin
+current = everforest

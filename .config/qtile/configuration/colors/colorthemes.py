@@ -2,6 +2,35 @@
 Color schemes for use with qtile.
 """
 
+from dataclasses import dataclass
+
+
+@dataclass
+class ColorPalette:
+    """
+    Class that defines a color palette.
+    """
+
+    base: str
+    red: str
+    orange: str
+    yellow: str
+    green: str
+    aqua: str
+    blue: str
+    purple: str
+
+
+@dataclass
+class ColorScheme:
+    """
+    Dataclass for holding colorschemes.
+    """
+
+    background: ColorPalette
+    foreground: ColorPalette
+
+
 # Distrotube color theme
 distrotube = [
     "#282c34",
@@ -48,6 +77,29 @@ everforest = {
         "statusline3": "#e67e80",
     },
 }
+
+everforest = ColorScheme(
+    background=ColorPalette(
+        base="#d3c6aaee",
+        red="#544247",
+        orange="#e69875",
+        yellow="#504f45",
+        green="#445349",
+        aqua="#83c092",
+        blue="#3b5360",
+        purple="#d699b6",
+    ),
+    foreground=ColorPalette(
+        base="#d3c6aaee",
+        red="#e67e80",
+        orange="#e69875",
+        yellow="#dbbc7f",
+        green="#a7c080",
+        aqua="#83c092",
+        blue="#7fbbb3",
+        purple="#d699b6",
+    ),
+)
 
 # Catppuccin color theme
 catppuccin = {
