@@ -13,8 +13,8 @@ def get_layouts():
     return [
         layout.MonadTall(
             margin=5,
-            border_focus=colorscheme.foreground.green,
-            border_normal=colorscheme.background.base,
+            border_focus=colorscheme.green,
+            border_normal=colorscheme.background,
         ),
         layout.Max(),
         # layout.Columns(),

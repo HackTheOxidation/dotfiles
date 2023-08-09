@@ -6,12 +6,13 @@ from dataclasses import dataclass
 
 
 @dataclass
-class ColorPalette:
+class ColorScheme:
     """
-    Class that defines a color palette.
+    Dataclass for holding colorschemes.
     """
 
-    base: str
+    background: str
+    foreground: str
     red: str
     orange: str
     yellow: str
@@ -19,16 +20,6 @@ class ColorPalette:
     aqua: str
     blue: str
     purple: str
-
-
-@dataclass
-class ColorScheme:
-    """
-    Dataclass for holding colorschemes.
-    """
-
-    background: ColorPalette
-    foreground: ColorPalette
 
 
 # Distrotube color theme
@@ -79,26 +70,15 @@ everforest = {
 }
 
 everforest = ColorScheme(
-    background=ColorPalette(
-        base="#d3c6aaee",
-        red="#544247",
-        orange="#e69875",
-        yellow="#504f45",
-        green="#445349",
-        aqua="#83c092",
-        blue="#3b5360",
-        purple="#d699b6",
-    ),
-    foreground=ColorPalette(
-        base="#d3c6aaee",
-        red="#e67e80",
-        orange="#e69875",
-        yellow="#dbbc7f",
-        green="#a7c080",
-        aqua="#83c092",
-        blue="#7fbbb3",
-        purple="#d699b6",
-    ),
+    background="#1e2326ee",
+    foreground="#d3c6aaee",
+    red="#e67e80",
+    orange="#e69875",
+    yellow="#dbbc7f",
+    green="#a7c080",
+    aqua="#83c092",
+    blue="#7fbbb3",
+    purple="#d699b6",
 )
 
 # Catppuccin color theme

@@ -25,11 +25,11 @@ widget_defaults = dict(
     font="Ubuntu Mono",
     fontsize=12,
     padding=3,
-    foreground=colorscheme.foreground.base,
+    foreground=colorscheme.foreground,
 )
 extension_defaults = widget_defaults.copy()
 
-my_bar = bar.Bar(get_bar_widgets(), 24, background="#00000000")
+my_bar = bar.Bar(get_bar_widgets(), 24, background=colorscheme.background)
 
 screens = [
     Screen(wallpaper=wallpaper, wallpaper_mode="fill", top=my_bar),
