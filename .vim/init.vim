@@ -1,5 +1,6 @@
-"HackTheOxidation's .vimrc
+" HackTheOxidation's .vimrc
 
+" Basic settings
 set number 			        " Enable line numbers	
 syntax on 			        " Enable syntax highlighting
 set nocompatible		    " Disable compatibility with Vi

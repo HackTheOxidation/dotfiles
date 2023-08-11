@@ -15,6 +15,7 @@ aliases['ll'] = 'ls -l'
 # Remove front dot in multiline input to make the code copy-pastable.
 $MULTILINE_PROMPT=' '
 $VI_MODE = True
+$XONSH_HISTORY_BACKEND = 'sqlite'
 
 ### Xontribs
 _xontribs = [
