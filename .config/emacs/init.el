@@ -1,7 +1,6 @@
 ;;; package --- Summary
 ;;; Commentary:
 
-
 ;;; Code:
 
 ;; Move Customization variables outside of of init.el
@@ -217,6 +216,15 @@
   (helm-flx-mode +1))
 
 
+;; Additional paths
+(defun home (path)
+  "Formats PATH with user home directory as prefix."
+  (concat (substitute-in-file-name "$HOME/") path))
+
+(dolist (element '(".deno/bin" ".local/bin" "go/bin" ".cargo/bin" ".scripts") nil)
+  (add-to-list 'exec-path (home element)))
+
+
 ;; Python IDE features
 (use-package python-mode
   :ensure t)
@@ -256,6 +264,11 @@
   :ensure t)
 
 
+;; JS/TS
+(use-package typescript-mode
+  :ensure t)
+
+
 ;; Minimalist Language Server
 (use-package eglot
   :after (python-mode)
@@ -274,13 +287,18 @@
   ((c-mode
     c++-mode
     cmake-mode
+    js-mode
     markdown-mode
     tex-mode
+    typescript-mode
     python-mode) . eglot-ensure)
   :commands (eglot eglot-ensure))
 
 (add-hook 'eglot--managed-mode-hook (lambda () (flymake-mode -1)))
 
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(typescript-mode . ("deno" "lsp"))))
 
 ;; Company for code auto-completions
 (use-package company

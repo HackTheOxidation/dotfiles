@@ -39,6 +39,7 @@ extra_paths = [
     "$HOME/go/bin",             # Go
     "$HOME/.cargo/bin",         # Rust Cargo
     "$HOME/.scripts",           # Personal Scripts
+    "$HOME/.deno/bin",          # Deno
 ]
 
 for p in extra_paths:
