@@ -40,6 +40,7 @@ extra_paths = [
     "$HOME/.cargo/bin",         # Rust Cargo
     "$HOME/.scripts",           # Personal Scripts
     "$HOME/.deno/bin",          # Deno
+    "$HOME/.dotnet/tools",      # .NET
 ]
 
 for p in extra_paths:

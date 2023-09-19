@@ -221,7 +221,14 @@
   "Formats PATH with user home directory as prefix."
   (concat (substitute-in-file-name "$HOME/") path))
 
-(dolist (element '(".deno/bin" ".local/bin" "go/bin" ".cargo/bin" ".scripts") nil)
+(dolist (element
+         '(".deno/bin"
+           ".local/bin"
+           "go/bin"
+           ".cargo/bin"
+           ".scripts"
+           ".dotnet/tools")
+         nil)
   (add-to-list 'exec-path (home element)))
 
 
@@ -253,6 +260,16 @@
 (use-package eglot-java
   :ensure t
   :hook (java-mode . eglot-java-mode))
+
+
+;; FSharp IDE features
+(use-package fsharp-mode
+  :ensure t)
+(setq-default fsharp-indent-offset 2)
+
+(use-package eglot-fsharp
+  :after fsharp-mode
+  :ensure t)
 
 
 ;; Markdown IDE features
