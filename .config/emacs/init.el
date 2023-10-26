@@ -127,7 +127,7 @@
 (use-package catppuccin-theme
   :ensure t)
 (add-to-list 'custom-theme-load-path "~/.config/emacs/everforest")
-(load-theme 'everforest-hard-dark t)
+(load-theme 'catppuccin t)
 
 
 ;; Disable line numbers for some nodes

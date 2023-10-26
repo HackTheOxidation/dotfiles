@@ -1,6 +1,6 @@
 # Import colorscheme
 import:
-  - ~/.config/alacritty/everforest.yml
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
 
 # Font configuration
 font:
