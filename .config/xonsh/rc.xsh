@@ -1,6 +1,7 @@
 """
 HackTheOxidation's Xonsh configuration
 """
+from prompt import get_prompt
 
 # Completions for xonsh
 COMPLETIONS_CONFIRM=True
@@ -34,17 +35,13 @@ if _xontribs:
   xontrib load @(_xontribs)
 
 # Extra locations for PATH-variable
-extra_paths = [
-    "$HOME/.local/bin",         # .local/bin
-    "$HOME/go/bin",             # Go
-    "$HOME/.cargo/bin",         # Rust Cargo
-    "$HOME/.scripts",           # Personal Scripts
-    "$HOME/.deno/bin",          # Deno
-    "$HOME/.dotnet/tools",      # .NET
-]
-
-for p in extra_paths:
-    $PATH.append(p)
+$PATH.extend(["$HOME/.local/bin",         # .local/bin
+              "$HOME/go/bin",             # Go
+              "$HOME/.cargo/bin",         # Rust Cargo
+              "$HOME/.scripts",           # Personal Scripts
+              "$HOME/.deno/bin",          # Deno
+              "$HOME/.dotnet/tools",      # .NET
+    ])
 
 ### Set the terminal prompt
-$PROMPT = '{env_name}{PURPLE}{user}{RESET}@{BLUE}{hostname} {CYAN}{cwd} {gitstatus} \n{BOLD_GREEN}❯❯❯{RESET} '
+$PROMPT = get_prompt()
