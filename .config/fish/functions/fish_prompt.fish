@@ -1,4 +1,9 @@
 function fish_prompt --description 'Write out the prompt'
+
+    if test -f /run/.toolboxenv
+        echo -s -n \U0001F6E0 " "
+    end
+
     set -l last_status $status
     set -l normal (set_color normal)
     set -l status_color (set_color brgreen)
