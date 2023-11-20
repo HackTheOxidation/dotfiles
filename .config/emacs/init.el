@@ -227,6 +227,7 @@
            "go/bin"
            ".cargo/bin"
            ".scripts"
+           ".local/share/coursier/bin"
            ".dotnet/tools")
          nil)
   (add-to-list 'exec-path (home element)))
@@ -286,6 +287,20 @@
   :ensure t)
 
 
+;;; JVM Languages
+;; Scala
+(use-package scala-mode
+  :ensure t
+  :interpreter ("scala" . scala-mode))
+
+(use-package sbt-mode
+  :after (scala-mode)
+  :ensure t
+  :commands sbt-start sbt-command
+  :config
+  (setq sbt:program-options '("-Dsbt.supershell=false")))
+
+
 ;; Minimalist Language Server
 (use-package eglot
   :after (python-mode)
@@ -308,7 +323,8 @@
     markdown-mode
     tex-mode
     typescript-mode
-    python-mode) . eglot-ensure)
+    python-mode
+    scala-mode) . eglot-ensure)
   :commands (eglot eglot-ensure))
 
 (add-hook 'eglot--managed-mode-hook (lambda () (flymake-mode -1)))
