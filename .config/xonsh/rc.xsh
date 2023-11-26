@@ -12,6 +12,9 @@ $FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE = True
 # Set bat as the default man-pager.
 MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 
+# Sets the editor
+EDITOR = "emacsclient -c -a emacs"
+
 # Aliases
 aliases['v'] = 'vim'
 aliases['r'] = 'ranger'
