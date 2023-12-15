@@ -26,6 +26,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 set $editor emacsclient -c -a emacs
 
 set $wallpaper /home/hacker/Nextcloud/HackTheOxidation/Wallpapers/stairs.jpg
+set $default_wallpaper /usr/share/backgrounds/default-dark.png
 
 set $screenlock swaylock --image $wallpaper
 set $lockdaemon $screenlock -f
@@ -33,7 +34,7 @@ set $lockdaemon $screenlock -f
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/default-dark.png fill
+output * bg $wallpaper fill
 #
 # Example configuration:
 #
