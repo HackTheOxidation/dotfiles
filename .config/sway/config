@@ -3,8 +3,8 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
-#include catppuccin-mocha
-include everforest
+include catppuccin-mocha
+#include everforest
 
 ### Variables
 #
@@ -20,7 +20,8 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show drun | xargs swaymsg exec --
+set $rofi_cmd rofi -terminal '$term'
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 set $editor emacsclient -c -a emacs
 
@@ -32,7 +33,7 @@ set $lockdaemon $screenlock -f
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $wallpaper fill
+output * bg /usr/share/backgrounds/default-dark.png fill
 #
 # Example configuration:
 #
@@ -80,7 +81,7 @@ exec /usr/bin/emacs --daemon &
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+c kill
+    bindsym $mod+c kill
 
     # Start your launcher
     bindsym $mod+p exec $menu
@@ -227,19 +228,19 @@ gaps outer 3
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+#bar {
+#    position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M %p'; do sleep 1; done
+#    # When the status_command prints a new line to stdout, swaybar updates.
+#    # The default just shows the current date and time.
+#    status_command while date +'%Y-%m-%d %I:%M %p'; do sleep 1; done
 
-    colors {
-        statusline $statusline2
-        background $bg0
-        inactive_workspace $green $bg0 $fg
-	focused_workspace $green $green $bg0
-    }
-}
+#    colors {
+#        statusline $statusline2
+#        background $bg0
+#        inactive_workspace $green $bg0 $fg
+#	focused_workspace $green $green $bg0
+#    }
+#}
 
-include /etc/sway/config.d/*
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
