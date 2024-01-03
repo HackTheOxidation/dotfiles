@@ -23,11 +23,11 @@ alias ls='lsd -h'
 alias ll='lsd -lh'
 
 ### Path Extensions
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.dotnet/tools:$PATH"
-export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/.scripts:$PATH"
+set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" "go/bin" ".scripts" ".nimble/bin" ".raku/bin"
 
-set -ga fish_user_paths /home/hacker/.nimble/bin
-set -ga fish_user_paths /home/hacker/.raku/bin
+for extra_path in $additional_paths
+    set -ga fish_user_paths "$HOME/$extra_path"
+end
+
+# Activate rbenv
+status --is-interactive; and rbenv init - fish | source
