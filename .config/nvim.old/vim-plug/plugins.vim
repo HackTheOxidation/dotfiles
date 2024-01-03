@@ -1,10 +1,4 @@
 " auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	"autocmd VimEnter * PlugInstall
-	"autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
@@ -30,11 +24,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'tyru/open-browser.vim'
 	Plug 'weirongxu/plantuml-previewer.vim'
 	Plug 'fladson/vim-kitty'
-	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 	Plug 'tpope/vim-dispatch'
+	Plug 'ionide/Ionide-vim'
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	Plug 'alx741/vim-stylishask'
+	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 call plug#end()
 

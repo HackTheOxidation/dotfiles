@@ -222,12 +222,10 @@
   (concat (substitute-in-file-name "$HOME/") path))
 
 (dolist (element
-         '(".deno/bin"
-           ".local/bin"
+         '(".local/bin"
            "go/bin"
            ".cargo/bin"
            ".scripts"
-           ".local/share/coursier/bin"
            ".dotnet/tools")
          nil)
   (add-to-list 'exec-path (home element)))
@@ -282,6 +280,25 @@
   :ensure t)
 
 
+;; Haskell IDE features
+(use-package haskell-mode
+  :ensure t)
+
+(use-package hindent
+  :after haskell
+  :ensure t
+  :hook (haskell-mode . hindent-mode))
+
+(use-package flycheck-haskell
+  :after haskell
+  :ensure t
+  :hook (haskell-mode . flycheck-haskell-setup))
+
+(use-package dante
+  :after haskell
+  :ensure t)
+
+
 ;; JS/TS
 (use-package typescript-mode
   :ensure t)
@@ -319,6 +336,7 @@
   ((c-mode
     c++-mode
     cmake-mode
+    haskell-mode
     js-mode
     markdown-mode
     tex-mode
@@ -435,6 +453,10 @@
 ;; Dashboard in emacsclient
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
+
+;; AnB syntax highlighting
+(add-to-list 'load-path "~/.config/emacs/lisp/")
+(require 'anb)
 
 (provide 'init)
 ;;; init.el ends here
