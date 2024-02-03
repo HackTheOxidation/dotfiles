@@ -27,6 +27,23 @@
 
 (setq use-package-always-ensure t)
 
+;; Setup straight.el
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
 ;; Tabs are Evil
 (setq-default indent-tabs-mode nil)
 
@@ -224,6 +241,7 @@
 (dolist (element
          '(".local/bin"
            "go/bin"
+           ".elan/bin"
            ".cargo/bin"
            ".scripts"
            ".dotnet/tools")
@@ -316,6 +334,17 @@
   :commands sbt-start sbt-command
   :config
   (setq sbt:program-options '("-Dsbt.supershell=false")))
+
+
+;; Lean 4
+(use-package lean4-mode
+  :straight (lean4-mode
+             :type git
+             :host github
+             :repo "leanprover/lean4-mode"
+             :files ("*.el" "data"))
+  ;; to defer loading the packages until required
+  :commands (lean4-mode))
 
 
 ;; Minimalist Language Server

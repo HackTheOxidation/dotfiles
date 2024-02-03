@@ -23,7 +23,7 @@ alias ls='lsd -h'
 alias ll='lsd -lh'
 
 ### Path Extensions
-set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" "go/bin" ".scripts" ".nimble/bin" ".raku/bin"
+set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" "go/bin" ".scripts" ".nimble/bin" ".raku/bin" ".elan/bin"
 
 for extra_path in $additional_paths
     set -ga fish_user_paths "$HOME/$extra_path"
@@ -31,3 +31,6 @@ end
 
 # Activate rbenv
 status --is-interactive; and rbenv init - fish | source
+
+# opam configuration
+source /home/hacker/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
