@@ -22,8 +22,13 @@ alias cat='bat'
 alias ls='lsd -h'
 alias ll='lsd -lh'
 
+# Deno install directory
+set -x DENO_INSTALL "$HOME/.deno"
+
 ### Path Extensions
-set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" "go/bin" ".scripts" ".nimble/bin" ".raku/bin" ".elan/bin"
+set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" \
+    "go/bin" ".scripts" ".nimble/bin" \
+    ".raku/bin" ".elan/bin" ".deno/bin"
 
 for extra_path in $additional_paths
     set -ga fish_user_paths "$HOME/$extra_path"
