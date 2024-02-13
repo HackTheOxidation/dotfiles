@@ -16,7 +16,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -25,7 +25,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 set $editor emacsclient -c -a emacs
 
-set $wallpaper /home/hacker/Nextcloud/HackTheOxidation/Wallpapers/stairs.jpg
+set $wallpaper /usr/share/backgrounds/personal/stairs.jpg
 set $default_wallpaper /usr/share/backgrounds/default-dark.png
 
 set $screenlock swaylock --image $wallpaper
@@ -73,6 +73,12 @@ exec swayidle -w \
 # Run programs at startup
 #
 exec /usr/bin/emacs --daemon &
+
+input * {
+  xkb_layout "dk"
+  xkb_variant "nodeadkeys"
+}
+
 
 ### Key bindings
 #
@@ -225,23 +231,8 @@ default_border pixel 2
 gaps inner 3
 gaps outer 3
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-#bar {
-#    position top
+bar {
+  position top
 
-#    # When the status_command prints a new line to stdout, swaybar updates.
-#    # The default just shows the current date and time.
-#    status_command while date +'%Y-%m-%d %I:%M %p'; do sleep 1; done
-
-#    colors {
-#        statusline $statusline2
-#        background $bg0
-#        inactive_workspace $green $bg0 $fg
-#	focused_workspace $green $green $bg0
-#    }
-#}
-
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+  swaybar_command waybar
+}

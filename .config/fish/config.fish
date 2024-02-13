@@ -28,7 +28,8 @@ set -x DENO_INSTALL "$HOME/.deno"
 ### Path Extensions
 set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" \
     "go/bin" ".scripts" ".nimble/bin" \
-    ".raku/bin" ".elan/bin" ".deno/bin"
+    ".raku/bin" ".elan/bin" ".deno/bin" \
+    "bin"
 
 for extra_path in $additional_paths
     set -ga fish_user_paths "$HOME/$extra_path"
