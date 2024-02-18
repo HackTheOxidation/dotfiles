@@ -321,9 +321,6 @@
 (use-package ada-mode
   :ensure t)
 
-(use-package ada-ts-mode
-  :ensure t)
-
 (dolist (element
          '(ada-indent
            ada-indent-after-trailing-comment
