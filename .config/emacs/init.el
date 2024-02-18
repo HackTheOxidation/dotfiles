@@ -143,7 +143,6 @@
 
 (use-package catppuccin-theme
   :ensure t)
-(add-to-list 'custom-theme-load-path "~/.config/emacs/everforest")
 (load-theme 'catppuccin t)
 
 
@@ -243,6 +242,7 @@
            "go/bin"
            ".elan/bin"
            ".cargo/bin"
+           ".deno/bin"
            ".scripts"
            ".dotnet/tools")
          nil)
@@ -298,25 +298,6 @@
   :ensure t)
 
 
-;; Haskell IDE features
-(use-package haskell-mode
-  :ensure t)
-
-(use-package hindent
-  :after haskell
-  :ensure t
-  :hook (haskell-mode . hindent-mode))
-
-(use-package flycheck-haskell
-  :after haskell
-  :ensure t
-  :hook (haskell-mode . flycheck-haskell-setup))
-
-(use-package dante
-  :after haskell
-  :ensure t)
-
-
 ;; JS/TS
 (use-package typescript-mode
   :ensure t)
@@ -336,15 +317,30 @@
   (setq sbt:program-options '("-Dsbt.supershell=false")))
 
 
-;; Lean 4
-(use-package lean4-mode
-  :straight (lean4-mode
-             :type git
-             :host github
-             :repo "leanprover/lean4-mode"
-             :files ("*.el" "data"))
-  ;; to defer loading the packages until required
-  :commands (lean4-mode))
+;; Ada
+(use-package ada-mode
+  :ensure t)
+
+(use-package ada-ts-mode
+  :ensure t)
+
+(dolist (element
+         '(ada-indent
+           ada-indent-after-trailing-comment
+           ada-indent-backend
+           ada-indent-broken
+           ada-indent-comment-col-0
+           ada-indent-comment-gnat
+           ada-indent-label
+           ada-indent-record-rel-type
+           ada-indent-renames
+           ada-indent-return
+           ada-indent-subprogram-is
+           ada-indent-use
+           ada-indent-when
+           ada-indent-with)
+         nil)
+  (setq element 2))
 
 
 ;; Minimalist Language Server
@@ -362,7 +358,9 @@
 	      ("C-RET" . eglot-code-action-quickfix))
   :ensure t
   :hook
-  ((c-mode
+  ((ada-mode
+    ada-ts-mode
+    c-mode
     c++-mode
     cmake-mode
     haskell-mode
@@ -378,7 +376,8 @@
 
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
-               '(typescript-mode . ("deno" "lsp"))))
+               '(typescript-mode . ("deno" "lsp"))
+               '(ada-ts-mode . ("ada_language_server"))))
 
 ;; Company for code auto-completions
 (use-package company

@@ -75,8 +75,9 @@ exec swayidle -w \
 exec /usr/bin/emacs --daemon &
 
 input * {
-  xkb_layout "dk"
-  xkb_variant "nodeadkeys"
+  xkb_layout "us"
+  # xkb_layout "da"
+  # xkb_variant "nodeadkeys"
 }
 
 
