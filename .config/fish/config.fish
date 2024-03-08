@@ -1,10 +1,5 @@
 ### My fish shell config
 
-### Commands for interactive sessions
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 ### Settings
 set fish_greeting # Remove the greeting
 set EDITOR "nvim"
@@ -35,8 +30,9 @@ for extra_path in $additional_paths
     set -ga fish_user_paths "$HOME/$extra_path"
 end
 
-# Activate rbenv
-status --is-interactive; and rbenv init - fish | source
-
-# opam configuration
-source /home/hacker/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+### Commands for interactive sessions
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    atuin init fish | source
+    rbenv init - fish | source
+end
