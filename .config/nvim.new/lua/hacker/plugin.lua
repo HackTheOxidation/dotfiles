@@ -20,13 +20,22 @@ return require("lazy").setup({
 
   -- LSP
   "neovim/nvim-lspconfig",
-  "williamboman/nvim-lsp-installer",
+  "williamboman/mason.nvim",
+  "mhartington/formatter.nvim",
+  "mfussenegger/nvim-lint",
+
+  -- Linting
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+  },
   
   -- Colorschemes
   { 
-      "catppuccin/nvim",
-      name = "catppuccin",
-      priority = 10000,
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 10000,
   },
 
   -- Completion
@@ -69,15 +78,6 @@ return require("lazy").setup({
   -- Autopairs
   "windwp/nvim-autopairs",
 
-  -- GitSigns
-  { 
-    "lewis6991/gitsigns.nvim", 
-    requires = { 
-        "nvim-lua/plenary.nvim" 
-    },
-    tag = 'release' -- To use the latest release
-  },
-
   -- ToggleTerm
   "akinsho/toggleterm.nvim",
 
@@ -86,42 +86,35 @@ return require("lazy").setup({
   'andrewradev/switch.vim',
   'tomtom/tcomment_vim',
 
+  "nvim-lua/plenary.nvim",
+  {
+    "j-hui/fidget.nvim",
+    opts = {},
+  },
+
+  -- GitSigns
+  { 
+    "lewis6991/gitsigns.nvim", 
+    dependencies = { 
+        "nvim-lua/plenary.nvim" 
+    },
+    tag = 'release' -- To use the latest release
+  },
+
+  -- Telescope
+  { 
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.6",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+
   -- Scala + metals LSP
   {
     "scalameta/nvim-metals",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      {
-        "j-hui/fidget.nvim",
-        opts = {},
-      },
-      {
-        "mfussenegger/nvim-dap",
-        config = function(self, opts)
-          -- Debug settings if you're using nvim-dap
-          local dap = require("dap")
-
-          dap.configurations.scala = {
-            {
-              type = "scala",
-              request = "launch",
-              name = "RunOrTest",
-              metals = {
-                runType = "runOrTestFile",
-                --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
-              },
-            },
-            {
-              type = "scala",
-              request = "launch",
-              name = "Test Target",
-              metals = {
-                runType = "testTarget",
-              },
-            },
-          }
-        end
-      },
+      "j-hui/fidget.nvim",
+      "mfussenegger/nvim-dap",
     },
     ft = { "scala", "sbt", "java" },
     opts = function()
@@ -236,4 +229,38 @@ return require("lazy").setup({
     end
 
   },
+
+  -- DAP
+  {
+    "mfussenegger/nvim-dap",
+    config = function(self, opts)
+      -- Debug settings if you're using nvim-dap
+      local dap = require("dap")
+
+      dap.configurations.scala = {
+        {
+          type = "scala",
+          request = "launch",
+          name = "RunOrTest",
+          metals = {
+            runType = "runOrTestFile",
+              --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
+            },
+          },
+          {
+            type = "scala",
+            request = "launch",
+            name = "Test Target",
+            metals = {
+              runType = "testTarget",
+            },
+          },
+        }
+    end
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap" },
+  },
+
 })
