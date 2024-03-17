@@ -30,6 +30,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	Plug 'alx741/vim-stylishask'
 	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+	Plug 'mikelue/vim-maven-plugin'
+	Plug 'justinmk/vim-sneak'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 

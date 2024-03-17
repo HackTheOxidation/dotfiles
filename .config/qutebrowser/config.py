@@ -17,7 +17,7 @@ c.aliases = {
 # Setting dark mode
 config.set("colors.webpage.darkmode.enabled", True)
 config.set("colors.webpage.darkmode.policy.images", "smart")
-config.set("colors.webpage.darkmode.threshold.text", 150)
+config.set("colors.webpage.darkmode.threshold.foreground", 150)
 config.set("colors.webpage.darkmode.threshold.background", 205)
 
 

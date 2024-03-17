@@ -35,6 +35,12 @@ inoremap <silent><expr> <c-space> pumvisible() ? coc#_select_confirm() : coc#ref
 vnoremap < <gv
 vnoremap > >gv
 
+" Shortcuts for telescope.nvim
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 
 "nnoremap <Leader>o o<Esc>^Da
 "nnoremap <Leader>O O<Esc>^Da
