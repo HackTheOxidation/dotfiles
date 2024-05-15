@@ -63,4 +63,5 @@ keymap("t", "<ESC>", "<C-\\><C-n>", term_opts)            -- quit the terminal
 -- Launchers --
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)         -- open netrw
 keymap("n", "<leader>t", ":ToggleTerm<cr>", opts)     -- open terminal
-keymap("n", "<leader>f", ":FZF<cr>", opts)            -- run FZF
+keymap("n", "<leader>f", ":Telescope fd<cr>", opts)   -- run find files (Telescope)
+keymap("n", "<leader>r", ":Telescope live_grep<cr>", opts)   -- run grep (Telescope)
