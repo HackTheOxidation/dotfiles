@@ -16,7 +16,7 @@ MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 EDITOR = "emacsclient -c -a emacs"
 
 # Aliases
-aliases['v'] = 'vim'
+aliases['v'] = 'nvim'
 aliases['r'] = 'ranger'
 aliases['ll'] = 'ls -l'
 aliases['cat'] = 'bat'
@@ -30,8 +30,8 @@ $XONSH_HISTORY_BACKEND = 'sqlite'
 
 # Xontribs
 _xontribs = [
-    'xlsd',
-    #'broot'
+    # 'xlsd',
+    # 'broot'
 ]
 
 if _xontribs:
@@ -48,3 +48,7 @@ $PATH.extend(["$HOME/.local/bin",         # .local/bin
 
 ### Set the terminal prompt
 $PROMPT = get_prompt()
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+$SDKMAN_DIR = "$HOME/.sdkman"
+source-bash "$HOME/.sdkman/bin/sdkman-init.sh"

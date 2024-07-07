@@ -36,3 +36,6 @@ if status is-interactive
     atuin init fish | source
     rbenv init - fish | source
 end
+
+# opam configuration
+source /home/hacker/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
