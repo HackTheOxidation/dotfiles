@@ -44,7 +44,11 @@ $PATH.extend(["$HOME/.local/bin",         # .local/bin
               "$HOME/.scripts",           # Personal Scripts
               "$HOME/.deno/bin",          # Deno
               "$HOME/.dotnet/tools",      # .NET
+              "/opt/RustRover-2024.2.3/bin",  # RustRover IDE
     ])
+
+# Source bash profile
+source-bash ~/.bash_profile
 
 ### Set the terminal prompt
 $PROMPT = get_prompt()

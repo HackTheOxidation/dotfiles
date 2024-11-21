@@ -73,6 +73,7 @@ exec swayidle -w \
 # Run programs at startup
 #
 exec /usr/bin/emacs --daemon &
+exec /usr/bin/lxpolkit &
 
 input * {
   xkb_layout "us"

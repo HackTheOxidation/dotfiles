@@ -24,7 +24,8 @@ set -x DENO_INSTALL "$HOME/.deno"
 set additional_paths ".local/bin" ".cargo/bin" ".dotnet/tools" \
     "go/bin" ".scripts" ".nimble/bin" \
     ".raku/bin" ".elan/bin" ".deno/bin" \
-    "bin" ".local/share/coursier/bin"
+    "bin" ".local/share/coursier/bin" \
+    "/opt/RustRover-2024.2.3/bin"
 
 for extra_path in $additional_paths
     set -ga fish_user_paths "$HOME/$extra_path"
