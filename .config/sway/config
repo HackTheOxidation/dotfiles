@@ -1,8 +1,5 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+# HackTheOxidation's sway config
+
 include catppuccin-mocha
 #include everforest
 
@@ -34,7 +31,15 @@ set $lockdaemon $screenlock -f
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $wallpaper fill
+output eDP-1 pos 0 0 res 1920x1200 bg $wallpaper fill
+output DP-10 pos 1920 0 res 2560x1440 bg $wallpaper fill
+
+set $laptop eDP-1
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+exec_always $HOME/.config/sway/laptop.sh
+
 #
 # Example configuration:
 #
@@ -68,6 +73,9 @@ exec swayidle -w \
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+# Notification daemon
+exec swaync
 
 #
 # Run programs at startup
@@ -197,6 +205,10 @@ input * {
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
 #
+# Toggle swaync control center:
+#
+  bindsym $mod+Shift+n exec swaync-client -t -sw
+#
 # Resizing containers:
 #
 mode "resize" {
@@ -221,7 +233,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-
 #
 # Border style
 #
@@ -233,8 +244,34 @@ default_border pixel 2
 gaps inner 3
 gaps outer 3
 
-bar {
-  position top
 
-  swaybar_command waybar
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+# bar
+#bar {
+#  position top
+#  colors {
+#    background         $base
+#    statusline         $text
+#    focused_statusline $text
+#    focused_separator  $base
+#    focused_workspace  $base $base $green
+#    active_workspace   $base $base $blue
+#    inactive_workspace $base $base $surface1
+#    urgent_workspace   $base $base $surface1
+#    binding_mode       $base $base $surface1
+#  }
+#}
+
+# Old config for starting waybar
+bar {
+ position top
+
+ swaybar_command waybar
 }

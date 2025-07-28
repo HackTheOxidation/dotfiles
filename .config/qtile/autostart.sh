@@ -4,3 +4,4 @@ lxpolkit &
 picom &
 /usr/bin/emacs --daemon &
 nm-applet &
+ulauncher &

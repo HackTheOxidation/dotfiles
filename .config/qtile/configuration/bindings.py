@@ -43,6 +43,8 @@ def get_key_bindings():
         Key([mod], "b", lazy.spawn(browser), desc="Spawn default browser"),
         Key([mod], "e", lazy.spawn(editor), desc="Spawn default editor"),
         Key([mod], "n", lazy.spawn(file_manager), desc="Spawn default file_manager"),
+        Key([mod, "control"], "1", lazy.to_screen(0), desc="Switch to first screen"),
+        Key([mod, "control"], "2", lazy.to_screen(1), desc="Switch to second screen"),
     ]
 
 

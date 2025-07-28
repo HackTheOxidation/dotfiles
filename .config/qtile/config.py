@@ -33,6 +33,7 @@ my_bar = bar.Bar(get_bar_widgets(), 24, background=colorscheme.background)
 
 screens = [
     Screen(wallpaper=wallpaper, wallpaper_mode="fill", top=my_bar),
+    Screen(wallpaper=wallpaper, wallpaper_mode="fill"),
 ]
 
 mouse = get_mouse_bindings()
